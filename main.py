@@ -130,7 +130,7 @@ async def send_otp_route(data: schemas.Phone):
             # ==========================================================================
             template_name = "YourAppNameTemplate"  # <--- REPLACE THIS or set to None
 
-            base_url = f"https://2factor.in/API/V1/{TWOFACTOR_API_KEY}/SMS/{mobile_number}/AUTOGEN/OTP1"
+            base_url = f"https://2factor.in/API/V1/{TWOFACTOR_API_KEY}/SMS/{mobile_number}/{otp}"
             request_url = f"{base_url}/{template_name}" if template_name else base_url
             log_template = template_name if template_name else "(No Template Used)"
 
